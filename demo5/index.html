@@ -8,7 +8,9 @@
 </head>
 <body>
     <div ng-controller="directive">
-        <expander etitle="title">{{text}}</expander>
+        <accordion>
+            <expander ng-repeat="expander in expanders" etitle="expander.title">{{expander.text}}</expander>
+        </accordion>
     </div>
 </body>
 </html>
