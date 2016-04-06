@@ -3,7 +3,7 @@
  */
 var directive = angular.module('time',[]);
 
-directive.directive('myCuurentTime', function($timeout, dateFilter){
+directive.directive('myCurrentTime', function($timeout, dateFilter){
     return function(scope,element,attrs){
         var format;
         var timeoutId;
