@@ -23,8 +23,10 @@ var app = angular.module('directive',[])
         }
     });
     app.controller('directive',function($scope){
-        $scope.title = "个人简介";
-        $scope.text = "Angular js概念多"
+        $scope.expanders = [
+            {title:"angular",text:"angular js概念多"},
+            {title:"react",text:"react + reduce + ui路由机制"}
+        ];
     });
 
 
