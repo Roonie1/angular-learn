@@ -7,13 +7,10 @@
     <script src="./directive.js"></script>
 </head>
 <body>
-    <!--<div ng-controller="directive">-->
-        <!--<accordion>-->
-            <!--<expander ng-repeat="expander in expanders" etitle="expander.title">{{expander.text}}</expander>-->
-        <!--</accordion>-->
-    <!--</div>-->
     <div ng-controller="directive">
-        <div my-directive etitle="title">{{text}}</div>
+        <accordion>
+            <expander ng-repeat="expander in expanders" etitle="expander.title">{{expander.text}}</expander>
+        </accordion>
     </div>
 </body>
 </html>
