@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <td>id</td>
+        <td>标题</td>
+        <td>内容</td>
+        <td>发布时间</td>
+    </tr>
+    <tr ng-repeat="news in newsList">
+        <td>{{news.id}}</td>
+        <td><a href="#/details/{{news.id}}">{{news.title}}</a></td>
+        <td>{{news.content}}</td>
+        <td>{{news.date}}</td>
+    </tr>
+</table>
