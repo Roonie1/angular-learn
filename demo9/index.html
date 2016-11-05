@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="form">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>form</title>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="form.js"></script>
+</head>
+<body ng-controller="form_ctl">
+    <form ng-submit="submit(myForm.$valid)" name="myForm" >
+        <div>
+            <label for="name">姓名:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1" ng-model="name" multiple-name/>
+            <span ng-show="myForm.name.$invalid">请输入正确的用户名（4~16字符）</span>
+        </div>
+        <div>
+            <label for="email">邮箱:</label>
+            <input type="text" name="email" id="email" value="" tabindex="1" ng-model="email" multiple-email/>
+            <span ng-show="myForm.email.$invalid">请输入正确的邮箱</span>
+        </div>
+        <div>
+            <h4>性别</h4>
+            <label for="radio-choice-1">男</label>
+            <input type="radio" name="radio" id="radio-choice-1" tabindex="2" value="choice-1" ng-model="sex"/>
+            <label for="radio-choice-2">女</label>
+            <input type="radio" name="radio" id="radio-choice-2" tabindex="3" value="choice-2" ng-model="sex"/>
+        </div>
+    
+        <div>
+            <label for="select-choice">年龄范围</label>
+            <select name="select-choice" id="select-choice" ng-modal="year">
+                <option value="Choice 1" selected>5~18岁</option>
+                <option value="Choice 2">18~30岁</option>
+                <option value="Choice 3">30岁以上</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="textarea">备注:</label>
+            <input type="text" name="name" id="name" value="" tabindex="1"/>
+        </div>
+    
+        <div>
+            <input type="submit" value="Submit"  ng-disabled="myForm.$invalid"/>
+        </div>
+    </form>
+</body>
+</html>
